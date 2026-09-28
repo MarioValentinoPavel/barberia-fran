@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Fran Barbershop Unisex · Por orden de llegada · Blanes</title>
+<meta name="description" content="Fran Barbershop Unisex, Carrer Pep Ventura 4, Blanes: degradados, diseños, trenzas y cortes unisex por orden de llegada. 28,7 mil seguidores en Instagram. 4,6 ★ en Google.">
+<link rel="icon" href="assets/ig/logo.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Azeret+Mono:wght@400;500;700;800&family=Passion+One:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<!-- PANTALLA DE TURNOS -->
+<div class="led" aria-live="polite"><p class="led__lbl">Ahora atendiendo</p><p class="led__num" id="ledNum">27</p></div>
+
+<main>
+<!-- DISPENSADOR -->
+<section class="top">
+  <div class="brand">
+    <img src="assets/ig/logo.jpg" alt="Logo de Fran Barber Shop">
+    <div><h1>FRAN<br><span>BARBERSHOP</span></h1><p>Unisex · Blanes · 28,7 mil en Instagram</p></div>
+  </div>
+  <div class="machine">
+    <div class="machine__body">
+      <p class="machine__t">Coja su turno</p>
+      <p class="machine__arrow">↓</p>
+      <div class="machine__slot"></div>
+    </div>
+    <button class="ticket" id="ticket" aria-label="Sacar un número">
+      <span class="ticket__small">FRAN BARBERSHOP</span>
+      <span class="ticket__lbl">SU TURNO</span>
+      <span class="ticket__num" id="myNum">—</span>
+      <span class="ticket__small" id="myTime">tira del ticket</span>
+    </button>
+    <p class="machine__note" id="machineNote">Tira del ticket (o haz clic). Aquí se atiende <b>por orden de llegada</b>: ven, coge tu número de verdad y en nada estás en la silla.</p>
+  </div>
+</section>
+
+<!-- EL TICKET LARGO -->
+<section class="receipt-wrap">
+  <article class="receipt">
+    <header class="r-head">
+      <p class="r-big">FRAN BARBERSHOP UNISEX</p>
+      <p>C/ PEP VENTURA, 4 · 17300 BLANES</p>
+      <p>TEL. 630 22 38 58</p>
+      <p class="r-sep">================================</p>
+      <p>FECHA <span id="rDate">--/--/----</span> · HORA <span id="rHour">--:--</span></p>
+      <p>ATENDIDO POR: ORDEN DE LLEGADA</p>
+      <p class="r-sep">--------------------------------</p>
+    </header>
+
+    <div class="r-items">
+      <p class="r-row"><span>DEGRADADO / FADE</span><span>✓</span></p>
+      <p class="r-row"><span>DISEÑO A NAVAJA (LÍNEAS)</span><span>✓</span></p>
+      <p class="r-row"><span>CORTE CLÁSICO TIJERA</span><span>✓</span></p>
+      <p class="r-row"><span>CROP / TEXTURIZADO</span><span>✓</span></p>
+      <p class="r-row"><span>TRENZAS / CORNROWS</span><span>✓</span></p>
+      <p class="r-row"><span>BOX BRAIDS (CON COLOR)</span><span>✓</span></p>
+      <p class="r-row"><span>BARBA</span><span>✓</span></p>
+      <p class="r-row"><span>CORTE UNISEX</span><span>✓</span></p>
+      <p class="r-sep">--------------------------------</p>
+      <p class="r-row r-total"><span>TOTAL</span><span>EL MEJOR CORTE DE BLANES*</span></p>
+      <p class="r-foot">*Según Joel S., cliente desde hace más de 10 años.</p>
+    </div>
+
+    <!-- SIMULADOR DE DEGRADADO -->
+    <div class="fade">
+      <p class="r-sep">==== SIMULADOR DE DEGRADADO ====</p>
+      <svg viewBox="0 0 300 300" class="fade__head" aria-hidden="true">
+        <defs>
+          <linearGradient id="hairG" x1="0" y1="0" x2="0" y2="1"><stop id="s1" offset=".35" stop-color="#fff"/><stop id="s2" offset=".62" stop-color="#fff" stop-opacity="0"/></linearGradient>
+          <pattern id="dots" width="5" height="5" patternUnits="userSpaceOnUse"><rect width="5" height="5" fill="#3a2a22"/><circle cx="2.5" cy="2.5" r="1.4" fill="#111"/></pattern>
+          <mask id="fadeMask"><rect x="40" y="30" width="240" height="200" fill="url(#hairG)"/></mask>
+          <clipPath id="skull"><path d="M70 170 C60 90 110 40 170 42 C235 44 262 100 250 160 C246 185 238 205 226 222 L96 222 C84 210 74 192 70 170Z"/></clipPath>
+        </defs>
+        <path d="M70 170 C60 90 110 40 170 42 C235 44 262 100 250 160 C246 185 238 205 226 222 L226 262 C226 272 216 280 206 280 L120 280 C110 280 100 272 100 262 L96 222 C84 210 74 192 70 170Z" fill="#e9c4a2" stroke="#111" stroke-width="4"/>
+        <path d="M232 150 C252 150 258 176 240 186" fill="#e9c4a2" stroke="#111" stroke-width="4"/>
+        <rect x="40" y="30" width="240" height="200" fill="url(#dots)" mask="url(#fadeMask)" clip-path="url(#skull)"/>
+        <path id="topHair" d="M72 150 C62 80 115 32 172 34 C236 36 266 92 252 148 C230 112 200 100 170 100 C130 100 96 118 72 150Z" fill="#111"/>
+        <path id="design" d="M112 182 L176 166 M118 198 L168 186" stroke="#e9c4a2" stroke-width="5" stroke-linecap="round" opacity="0"/>
+      </svg>
+      <p class="fade__name" id="fadeName">MID FADE</p>
+      <input type="range" id="fadeRange" min="0" max="4" step="1" value="2" aria-label="Altura del degradado">
+      <div class="fade__labels"><span>TIJERA</span><span>LOW</span><span>MID</span><span>HIGH</span><span>SKIN</span></div>
+      <label class="fade__design"><input type="checkbox" id="designChk"> AÑADIR DISEÑO A NAVAJA</label>
+      <a class="r-btn" id="fadeCta" href="https://wa.me/34630223858" target="_blank" rel="noopener">[ LO QUIERO ASÍ ]</a>
+    </div>
+
+    <!-- FOTOS DEL DÍA -->
+    <div class="prints">
+      <p class="r-sep">======= FOTOS DEL DÍA =======</p>
+      <div class="prints__grid">
+        <img src="assets/ig/p01.jpg" alt="Degradado con línea de diseño"><img src="assets/ig/p09.jpg" alt="Degradado alto con tupé"><img src="assets/ig/p06.jpg" alt="Trenzas cornrows"><img src="assets/ig/p10.jpg" alt="Box braids con hilos azules"><img src="assets/ig/p07.jpg" alt="Crop texturizado"><img src="assets/ig/p04.jpg" alt="Degradado clásico">
+      </div>
+    </div>
+
+    <div class="r-quotes">
+      <p class="r-sep">========= OPINIONES =========</p>
+      <p>«LLEVO MÁS DE 10 AÑOS CORTÁNDOME AQUÍ: ATENCIÓN GENIAL Y EL MEJOR CORTE DE BLANES.»<br>— JOEL S.</p>
+      <p>«EL MEJOR PELUQUERO: CORTA EXCELENTE, BUENA ACTITUD Y AMBIENTE.»<br>— AXEL</p>
+      <p>«LIMPIO, RÁPIDO Y ECONÓMICO.»<br>— GOOGLE</p>
+      <p class="r-row r-total"><span>VALORACIÓN</span><span>4,6 ★ (105)</span></p>
+    </div>
+
+    <footer class="r-end">
+      <p class="r-sep">================================</p>
+      <p>HORARIO: LUNES A SÁBADO</p>
+      <p>10:00–14:00 · 15:00–20:00</p>
+      <p>DOMINGO CERRADO</p>
+      <div class="r-bar" aria-hidden="true"></div>
+      <p class="r-big">¡GRACIAS POR SU VISITA!</p>
+      <div class="r-actions">
+        <a class="r-btn" href="https://wa.me/34630223858?text=Hola%20Fran%2C%20%C2%BFc%C3%B3mo%20est%C3%A1%20la%20cola%20hoy%3F" target="_blank" rel="noopener">[ WHATSAPP ]</a>
+        <a class="r-btn" href="https://www.google.com/maps/search/?api=1&query=Barbershop+Fran+Carrer+Pep+Ventura+4+Blanes" target="_blank" rel="noopener">[ CÓMO LLEGAR ]</a>
+        <a class="r-btn" href="https://www.instagram.com/peluqueriafranblanes/" target="_blank" rel="noopener">[ INSTAGRAM ]</a>
+      </div>
+    </footer>
+  </article>
+</section>
+</main>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
